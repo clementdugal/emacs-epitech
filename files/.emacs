@@ -1,6 +1,15 @@
+;;
+;; .emacs for emacs_config in /home/dugal_c/
+;; 
+;; Made by Clement DUGAL
+;; Login   <dugal_c@epitech.net>
+;; 
+;; Started on  Thu Mar 13 17:37:11 2014 Clement DUGAL
+;; Last update Thu Mar 13 17:38:15 2014 Clement DUGAL
+;;
+
 (load "std.el")
 (load "std_comment.el")
-;;(load "tuareg-site-file.el")
 
 (global-linum-mode 1)
 ;;(setq-default show-trailing-whitespace t)
@@ -16,8 +25,24 @@
       kept-old-versions 5    ; and how many of the old
       )
 
-
 (add-to-list 'load-path "~/.emacs.d/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
+
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(setq web-mode-engines-alist
+      '(("php"    . "\\.phtml\\'")
+        ("blade"  . "\\.blade\\."))
+)
