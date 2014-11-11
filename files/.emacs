@@ -5,8 +5,12 @@
 ;; Login   <dugal_c@epitech.net>
 ;; 
 ;; Started on  Thu Mar 13 17:37:11 2014 Clement DUGAL
-;; Last update Thu Mar 13 17:38:15 2014 Clement DUGAL
+;; Last update Tue Nov 11 15:12:23 2014 Clement DUGAL
 ;;
+
+(eval-after-load "warnings"
+  ;; shut up, emacs!
+  '(setq display-warning-minimum-level :error))
 
 (load "std.el")
 (load "std_comment.el")
