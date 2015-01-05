@@ -1,3 +1,2 @@
-File       .emacs    => in your home directory
-Directory  .emacs.d  => in your home directory
-Directory  site-lisp => in /usr/share/emacs/
+Nouvel URL du repository : http://stash.clementdugal.fr/projects/EPITECH/repos/emacs-config
+
